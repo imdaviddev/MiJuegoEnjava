@@ -27,6 +27,15 @@ public class Fondo {
 		this.jueguito = jueguito;
 	}
 	
+	public void mover() {
+		x1 -= 2;
+		x2 -= 2;
+		if(x1==0 && x2==-1300) {
+			x1 = 1300;
+			x2 = 0;
+		}
+	}
+	
 	// Autodibujarse
 	public void paint(Graphics2D g) {
 		ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/multimedia/fondoArboles.jpg"));
